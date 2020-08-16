@@ -1,0 +1,16 @@
+﻿<h1>Bookmarks</h1>
+
+<input type="button" class = "btn" value="Back to Search" onclick="window.location.href='/#!/'" />
+
+<div ng-controller="BookmarksController as vm">
+    <div class="col-sm-12">
+        <div class="col-sm-4" ng-repeat="bookmark in vm.BookmarksSaved">
+            <div>
+                <img ng-model="Avatar" class="image" ng-src="{{bookmark.Avatar}}">
+            </div>
+            <div>
+                {{bookmark.Full_name}}
+            </div>
+        </div>
+    </div>
+</div>

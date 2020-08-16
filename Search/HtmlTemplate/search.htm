@@ -1,0 +1,31 @@
+﻿<h1>Search</h1>
+
+<div ng-controller="SearchController as vm">
+
+    <div class="col-sm-12">
+        <div class="col-sm-6">
+            <label for="name"> Name: </label>
+            <input type="text" id="name" ng-model="Name" />
+        </div>
+
+        <div class="col-sm-6">
+            <input type="button"  class = "btn" value="Search" ng-click="Search()" />
+            <input type="button"  class = "btn" value="Bookmarks" onclick="window.location.href='/#!/bookmarks'" />
+        </div>
+      
+    </div>
+
+    <div class="col-sm-12">
+        <div class="col-sm-4" ng-repeat="user in vm.users">
+            <div>
+                <img ng-model="Avatar" class="image" ng-src="{{user.Avatar}}">
+            </div>
+            <div>
+                {{user.Full_name}}
+            </div>
+            <div>
+                <input type="button" class="btnSave btn" value="Save" ng-click="Save(user)" />
+            </div>
+        </div>
+    </div>
+</div>

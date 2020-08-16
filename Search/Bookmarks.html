@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div ng-app="MyApp" ng-controller="MyController as vm">
+        <div class="col-sm-12">
+            <div class="col-sm-4" ng-repeat="bookmark in vm.bookmarks">
+                <div>
+                    <img ng-model="Avatar" class="image" ng-src="{{bookmark.Avatar}}">
+                </div>
+                <div>
+                    {{bookmark.Full_name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
